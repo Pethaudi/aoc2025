@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using aoc2025;
+using System.Diagnostics.Metrics;
 
 
 Console.WriteLine("01. test.txt: {0}", _01.start("test.txt"));
@@ -40,3 +41,24 @@ Console.WriteLine("06_2. data.txt: {0}", _06.start2("data.txt"));
 
 Console.WriteLine("07. test.txt: {0}", _07.start("test.txt"));
 Console.WriteLine("07. data.txt: {0}", _07.start("data.txt"));
+
+/* bool isTimelineCalcDone = false;
+int _07Counter = 0;
+_07.start3("test.txt", (int counter) =>
+{
+    _07Counter += counter;
+});
+
+while (!isTimelineCalcDone)
+{
+    var oldCounter = _07Counter;
+    Thread.Sleep(500);
+
+    if (oldCounter == _07Counter)
+    {
+        isTimelineCalcDone = true;
+    }
+}
+Console.WriteLine("07_2. test.txt: {0}", _07Counter); */
+Console.WriteLine("07_2. test.txt: {0}", _07.start4("test.txt"));
+Console.WriteLine("07_2. data.txt: {0}", _07.start4("data.txt"));
